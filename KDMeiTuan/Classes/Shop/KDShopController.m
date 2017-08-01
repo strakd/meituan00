@@ -132,7 +132,33 @@
     }];
     
     _shopTagView = shopTagView;
+    
+    [self makeShopTagButtonWithTitle:@"点菜"];
+    [self makeShopTagButtonWithTitle:@"评价"];
+    [self makeShopTagButtonWithTitle:@"商家"];
+    
+    [shopTagView.subviews mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.offset(0);
+    }];
+    
+    [shopTagView.subviews mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:0 leadSpacing:0 tailSpacing:0];
+    
 }
+
+#pragma mark -创建及添加标签栏中的按钮
+- (UIButton *)makeShopTagButtonWithTitle:(NSString *)title{
+    
+    UIButton *btn = [[UIButton alloc] init];
+    [btn setTitle:title forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont systemFontOfSize:14];
+    
+    //把按钮添加到标签栏中
+    [_shopTagView addSubview:btn];
+    
+    return btn;
+}
+
 
 #pragma mark - 添加滚动视图(scrollview)
 - (void)settingShopScrollView{
