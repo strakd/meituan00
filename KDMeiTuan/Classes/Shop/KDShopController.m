@@ -9,7 +9,7 @@
 #import "KDShopController.h"
 #import "KDFoodDetailController.h"
 #import "KDNavigationBar.h"
-
+#import "KDMeiTuan.pch"
 
 @interface KDShopController ()
 //头部视图
@@ -133,7 +133,7 @@
     
     _shopTagView = shopTagView;
     
-    [self makeShopTagButtonWithTitle:@"点菜"];
+    UIButton *orderBtn = [self makeShopTagButtonWithTitle:@"点菜"];
     [self makeShopTagButtonWithTitle:@"评价"];
     [self makeShopTagButtonWithTitle:@"商家"];
     
@@ -143,6 +143,19 @@
     
     [shopTagView.subviews mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:0 leadSpacing:0 tailSpacing:0];
     
+    // TODO: 添加模拟滚动指示小黄条
+    UIView *shopTagLineView = [[UIView alloc] init];
+    shopTagLineView.backgroundColor = [UIColor primaryYellowColor];
+    [shopTagView addSubview:shopTagLineView];
+    
+    [shopTagLineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.offset(50);
+        make.height.offset(4);
+        make.bottom.offset(0);
+        
+        //小黄条添加约束的代码要写在按钮添加约束的后面
+        make.centerX.equalTo(orderBtn).offset(0);
+    }];
 }
 
 #pragma mark -创建及添加标签栏中的按钮

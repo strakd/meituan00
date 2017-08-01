@@ -10,6 +10,7 @@
 		5E0554D11F2DF4A100B50FCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0554D01F2DF4A100B50FCE /* main.m */; };
 		5E0554DC1F2DF4A100B50FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E0554DB1F2DF4A100B50FCE /* Assets.xcassets */; };
 		5E0554DF1F2DF4A100B50FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E0554DD1F2DF4A100B50FCE /* LaunchScreen.storyboard */; };
+		5E98DAEF1F30DA60006B26EC /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E98DAEE1F30DA60006B26EC /* UIColor+Addition.m */; };
 		5E9B64D01F2E0358000336F4 /* KDShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B64CF1F2E0358000336F4 /* KDShopController.m */; };
 		5E9B64D31F2E04E6000336F4 /* KDFoodDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B64D21F2E04E6000336F4 /* KDFoodDetailController.m */; };
 		5E9B64D61F2E0B1B000336F4 /* KDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B64D51F2E0B1B000336F4 /* KDNavigationController.m */; };
@@ -59,6 +60,9 @@
 		5E0554DB1F2DF4A100B50FCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E0554DE1F2DF4A100B50FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E0554E01F2DF4A100B50FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E98DAED1F30DA60006B26EC /* UIColor+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Addition.h"; sourceTree = "<group>"; };
+		5E98DAEE1F30DA60006B26EC /* UIColor+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Addition.m"; sourceTree = "<group>"; };
+		5E98DAF21F30DBA9006B26EC /* Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Additions.h; sourceTree = "<group>"; };
 		5E9B64CE1F2E0358000336F4 /* KDShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDShopController.h; sourceTree = "<group>"; };
 		5E9B64CF1F2E0358000336F4 /* KDShopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDShopController.m; sourceTree = "<group>"; };
 		5E9B64D11F2E04E6000336F4 /* KDFoodDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDFoodDetailController.h; sourceTree = "<group>"; };
@@ -358,6 +362,9 @@
 		5EEFEE8A1F2DFB9500BFB34A /* Common(分类) */ = {
 			isa = PBXGroup;
 			children = (
+				5E98DAED1F30DA60006B26EC /* UIColor+Addition.h */,
+				5E98DAEE1F30DA60006B26EC /* UIColor+Addition.m */,
+				5E98DAF21F30DBA9006B26EC /* Additions.h */,
 			);
 			name = "Common(分类)";
 			path = Common;
@@ -453,6 +460,7 @@
 				5EEFEE6C1F2DFAD700BFB34A /* AFURLSessionManager.m in Sources */,
 				5EEFEE731F2DFAD700BFB34A /* NSArray+MASAdditions.m in Sources */,
 				5E9B64D31F2E04E6000336F4 /* KDFoodDetailController.m in Sources */,
+				5E98DAEF1F30DA60006B26EC /* UIColor+Addition.m in Sources */,
 				5EEFEE691F2DFAD700BFB34A /* AFSecurityPolicy.m in Sources */,
 				5EEFEE821F2DFAD700BFB34A /* UIButton+WebCache.m in Sources */,
 				5EEFEE751F2DFAD700BFB34A /* View+MASAdditions.m in Sources */,
