@@ -12,8 +12,13 @@
 
 
 @interface KDShopController ()
+//头部视图
 @property (nonatomic, weak) UIView *shopHeaderView;
+//导航栏右侧的添加
 @property (nonatomic, strong) UIBarButtonItem *rightBurronItem;
+//这个是
+@property (nonatomic, weak) UIView *shopTagView;
+
 
 @end
 
@@ -30,6 +35,15 @@
     //设置导航控制器背景颜色
     self.view.backgroundColor = [UIColor yellowColor];
     
+    [self settingNormal];
+    
+    
+}
+
+
+#pragma mark -默认设置
+- (void)settingNormal{
+    
     //设置导航条的标题
     self.navItem.title = @"🐸青蛙点餐";
     
@@ -42,12 +56,21 @@
     
     //设置导航条右边分享按钮
     _rightBurronItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_share"] style:UIBarButtonItemStylePlain target:nil action:nil];
+    //设置导航条右边按钮
     self.navItem.rightBarButtonItem = _rightBurronItem;
+    //设置导航条主题色
     self.navBar.tintColor = [UIColor whiteColor];
     
+    //添加平移
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture:)];
     
+    
+    //添加手势到控制器的view上
+    [self.view addGestureRecognizer:pan];
+
     
 }
+
 
 //轻触一下
 //- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -61,9 +84,23 @@
 //    
 //}
 
-
+#pragma mark -界面处理
 - (void)setupUI{
     
+    // TODO: 创建及添加头部视图
+    [self settingShopHeaderView];
+    
+    // TODO: 添加标签栏
+    [self settingShopTagView];
+    
+    // TODO: 添加滚动视图(scrollview)
+    [self settingShopScrollView];
+}
+
+#pragma mark -添加头部视图
+- (void)settingShopHeaderView{
+    
+    //创建及添加头部视图
     UIView *shopHeaderview = [[UIView alloc] init];
     
     shopHeaderview.backgroundColor = [UIColor blueColor];
@@ -76,20 +113,44 @@
     }];
     
     
-    //添加平移
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture:)];
- 
-    
-    //添加手势到控制器的view上
-    [self.view addGestureRecognizer:pan];
+   
     
     _shopHeaderView = shopHeaderview;
+}
+
+
+#pragma mark -添加标签栏
+- (void)settingShopTagView{
+    UIView *shopTagView = [[UIView alloc] init];
+    shopTagView.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:shopTagView];
+    
+    [shopTagView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.offset(0);
+        make.top.equalTo(_shopHeaderView.mas_bottom).offset(0);
+        make.height.offset(44);
+    }];
+    
+    _shopTagView = shopTagView;
+}
+
+#pragma mark - 添加滚动视图(scrollview)
+- (void)settingShopScrollView{
+    //创建滚动视图
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:scrollView];
+    
+    [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.offset(0);
+        make.top.equalTo(_shopTagView.mas_bottom).offset(0);
+    }];
     
     
 }
 
 
-//
+#pragma mark -控制器view平移手势触发时调用的方法
 - (void)panGesture:(UIPanGestureRecognizer *)pan{
     //获得平移的距离
     CGPoint p = [pan translationInView:pan.view];
