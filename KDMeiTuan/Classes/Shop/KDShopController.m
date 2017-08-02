@@ -139,6 +139,10 @@
     _shopTagView = shopTagView;
     
     UIButton *orderBtn = [self makeShopTagButtonWithTitle:@"点菜"];
+    
+    //给点菜按钮设置默认就是加粗
+    orderBtn.titleLabel.font = [UIFont boldSystemFontOfSize:14];
+    
     [self makeShopTagButtonWithTitle:@"评价"];
     [self makeShopTagButtonWithTitle:@"商家"];
     
@@ -338,6 +342,31 @@
 }
 
 
+#pragma mark -手动拖拽滚动完全停下来后调用次方法
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    
+    //要整页数
+    NSInteger page = scrollView.contentOffset.x / scrollView.bounds.size.width;
+ 
+    //遍历标签栏中的所有子控件
+    for (NSInteger i = 0; i < _shopTagView.subviews.count; i++) {
+        
+        //获取子控件
+        UIButton *btn = _shopTagView.subviews[i];
+        //判断当前控件是不是按钮
+        if ([btn isKindOfClass:[UIButton class]]) {
+            //i == 页数 刚好就对应相应的按钮
+            
+            //如果当前页数和按钮对应时,就把按钮中的文字字体加粗
+            if (page == i) {
+                btn.titleLabel.font = [UIFont boldSystemFontOfSize:14];
+            }else{
+                //反之就把按钮的文字恢复到不加粗状态
+                btn.titleLabel.font = [UIFont systemFontOfSize:14];
+            }
+        }
+    }
+}
 
 
 
