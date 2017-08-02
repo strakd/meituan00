@@ -11,6 +11,9 @@
 		5E0554DC1F2DF4A100B50FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E0554DB1F2DF4A100B50FCE /* Assets.xcassets */; };
 		5E0554DF1F2DF4A100B50FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E0554DD1F2DF4A100B50FCE /* LaunchScreen.storyboard */; };
 		5E98DAEF1F30DA60006B26EC /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E98DAEE1F30DA60006B26EC /* UIColor+Addition.m */; };
+		5E98DAFB1F314CAC006B26EC /* ShopCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E98DAFA1F314CAC006B26EC /* ShopCommentController.m */; };
+		5E98DAFE1F314CC6006B26EC /* ShopinfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E98DAFD1F314CC6006B26EC /* ShopinfoController.m */; };
+		5E98DB011F314D3E006B26EC /* ShopOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E98DB001F314D3E006B26EC /* ShopOrderController.m */; };
 		5E9B64D01F2E0358000336F4 /* KDShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B64CF1F2E0358000336F4 /* KDShopController.m */; };
 		5E9B64D31F2E04E6000336F4 /* KDFoodDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B64D21F2E04E6000336F4 /* KDFoodDetailController.m */; };
 		5E9B64D61F2E0B1B000336F4 /* KDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B64D51F2E0B1B000336F4 /* KDNavigationController.m */; };
@@ -63,6 +66,12 @@
 		5E98DAED1F30DA60006B26EC /* UIColor+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Addition.h"; sourceTree = "<group>"; };
 		5E98DAEE1F30DA60006B26EC /* UIColor+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Addition.m"; sourceTree = "<group>"; };
 		5E98DAF21F30DBA9006B26EC /* Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Additions.h; sourceTree = "<group>"; };
+		5E98DAF91F314CAC006B26EC /* ShopCommentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCommentController.h; sourceTree = "<group>"; };
+		5E98DAFA1F314CAC006B26EC /* ShopCommentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCommentController.m; sourceTree = "<group>"; };
+		5E98DAFC1F314CC6006B26EC /* ShopinfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopinfoController.h; sourceTree = "<group>"; };
+		5E98DAFD1F314CC6006B26EC /* ShopinfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopinfoController.m; sourceTree = "<group>"; };
+		5E98DAFF1F314D3E006B26EC /* ShopOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopOrderController.h; sourceTree = "<group>"; };
+		5E98DB001F314D3E006B26EC /* ShopOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopOrderController.m; sourceTree = "<group>"; };
 		5E9B64CE1F2E0358000336F4 /* KDShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDShopController.h; sourceTree = "<group>"; };
 		5E9B64CF1F2E0358000336F4 /* KDShopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDShopController.m; sourceTree = "<group>"; };
 		5E9B64D11F2E04E6000336F4 /* KDFoodDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDFoodDetailController.h; sourceTree = "<group>"; };
@@ -206,9 +215,42 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5E98DAF31F30E002006B26EC /* ShopComment(评价) */ = {
+			isa = PBXGroup;
+			children = (
+				5E98DAF91F314CAC006B26EC /* ShopCommentController.h */,
+				5E98DAFA1F314CAC006B26EC /* ShopCommentController.m */,
+			);
+			name = "ShopComment(评价)";
+			path = ShopComment;
+			sourceTree = "<group>";
+		};
+		5E98DAF41F30E002006B26EC /* Shopinfo(商家) */ = {
+			isa = PBXGroup;
+			children = (
+				5E98DAFC1F314CC6006B26EC /* ShopinfoController.h */,
+				5E98DAFD1F314CC6006B26EC /* ShopinfoController.m */,
+			);
+			name = "Shopinfo(商家)";
+			path = Shopinfo;
+			sourceTree = "<group>";
+		};
+		5E98DAF51F30E002006B26EC /* ShopOrder(点菜) */ = {
+			isa = PBXGroup;
+			children = (
+				5E98DAFF1F314D3E006B26EC /* ShopOrderController.h */,
+				5E98DB001F314D3E006B26EC /* ShopOrderController.m */,
+			);
+			name = "ShopOrder(点菜)";
+			path = ShopOrder;
+			sourceTree = "<group>";
+		};
 		5EEFEE121F2DFA3F00BFB34A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5E98DAF51F30E002006B26EC /* ShopOrder(点菜) */,
+				5E98DAF31F30E002006B26EC /* ShopComment(评价) */,
+				5E98DAF41F30E002006B26EC /* Shopinfo(商家) */,
 				5EEFEE141F2DFA3F00BFB34A /* Main(主要的) */,
 				5EEFEE151F2DFA3F00BFB34A /* Shop(点餐) */,
 				5EEFEE131F2DFA3F00BFB34A /* FoodDeatil(实物详情) */,
@@ -458,8 +500,10 @@
 				5EEFEE811F2DFAD700BFB34A /* SDWebImagePrefetcher.m in Sources */,
 				5E9B64D61F2E0B1B000336F4 /* KDNavigationController.m in Sources */,
 				5EEFEE6C1F2DFAD700BFB34A /* AFURLSessionManager.m in Sources */,
+				5E98DAFE1F314CC6006B26EC /* ShopinfoController.m in Sources */,
 				5EEFEE731F2DFAD700BFB34A /* NSArray+MASAdditions.m in Sources */,
 				5E9B64D31F2E04E6000336F4 /* KDFoodDetailController.m in Sources */,
+				5E98DB011F314D3E006B26EC /* ShopOrderController.m in Sources */,
 				5E98DAEF1F30DA60006B26EC /* UIColor+Addition.m in Sources */,
 				5EEFEE691F2DFAD700BFB34A /* AFSecurityPolicy.m in Sources */,
 				5EEFEE821F2DFAD700BFB34A /* UIButton+WebCache.m in Sources */,
@@ -470,6 +514,7 @@
 				5EEFEE881F2DFAD700BFB34A /* UIView+WebCache.m in Sources */,
 				5EEFEE6E1F2DFAD700BFB34A /* MASConstraint.m in Sources */,
 				5EEFEE831F2DFAD700BFB34A /* UIImage+GIF.m in Sources */,
+				5E98DAFB1F314CAC006B26EC /* ShopCommentController.m in Sources */,
 				5EEFEE791F2DFAD700BFB34A /* NSImage+WebCache.m in Sources */,
 				5EEFEE741F2DFAD700BFB34A /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				5EEFEE841F2DFAD700BFB34A /* UIImage+MultiFormat.m in Sources */,

@@ -10,6 +10,9 @@
 #import "KDFoodDetailController.h"
 #import "KDNavigationBar.h"
 #import "KDMeiTuan.pch"
+#import "ShopOrderController.h"
+#import "ShopCommentController.h"
+#import "ShopinfoController.h"
 
 @interface KDShopController ()
 //头部视图
@@ -180,10 +183,50 @@
     scrollView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:scrollView];
     
+    //滚动条关闭
+    scrollView.showsVerticalScrollIndicator = NO;
+    scrollView.showsHorizontalScrollIndicator = NO;
+    
+    //分页效果开启
+    scrollView.pagingEnabled = YES;
+    
+    //弹簧属性关闭
+    scrollView.bounces = NO;
+    
+    
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.offset(0);
         make.top.equalTo(_shopTagView.mas_bottom).offset(0);
     }];
+    
+    //添加三个控制器
+    ShopOrderController *shoOrdVC = [[ShopOrderController alloc] init];
+    ShopCommentController *shoComVC = [[ShopCommentController alloc] init];
+    ShopinfoController *shoInfVC = [[ShopinfoController alloc] init];
+    
+    //简便添加方式,使用for循环
+    
+    NSArray *vcs = @[shoOrdVC,shoComVC,shoInfVC];
+    
+    for (UIViewController *VC in vcs) {
+        //把控制器的view添加到scrollView中
+        [scrollView addSubview:VC.view];
+        
+        //建立父子控制器关系
+        [self addChildViewController:VC];
+        
+        //告诉父控制器已经添加好了
+        [VC didMoveToParentViewController:self];
+    }
+    
+    [scrollView.subviews mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.offset(0);
+        make.width.height.equalTo(scrollView);
+        
+    }];
+    
+    //第一空:轴向水平 第二空:内部之间相隔0间距 第三空:距离父控件最左边0间距 第四空:距离父控件最右边0间距
+    [scrollView.subviews mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:0 leadSpacing:0 tailSpacing:0];
     
     
 }
