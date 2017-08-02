@@ -24,6 +24,8 @@
 @property (nonatomic, weak) UIView *shopTagView;
 //小黄条
 @property (nonatomic, weak) UIView *shopTagLineView;
+//
+@property (nonatomic, weak) UIScrollView *scrollView;
 
 @end
 
@@ -177,11 +179,26 @@
     [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     btn.titleLabel.font = [UIFont systemFontOfSize:14];
     
+    //给按钮添加监听事件
+    [btn addTarget:self action:@selector(shopTagBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    //用标签视图子控件的个数来当按钮的tag
+    btn.tag = _shopTagView.subviews.count; 
+    
     //把按钮添加到标签栏中
     [_shopTagView addSubview:btn];
     
     return btn;
 }
+
+#pragma mark -添加标签栏中的按钮时调用此方法
+- (void)shopTagBtnClick:(UIButton *)btn{
+    
+    [_scrollView setContentOffset:CGPointMake(btn.tag * _scrollView.bounds.size.width, 0) animated:YES];
+    
+}
+
 
 
 #pragma mark - 添加滚动视图(scrollview)
@@ -240,6 +257,8 @@
     //给scrollView设置代理
     scrollView.delegate = self;
     
+    
+    _scrollView = scrollView;
 }
 
 
@@ -368,6 +387,13 @@
     }
 }
 
+
+#pragma mark -代码方式滚动并且有动画时,滚动完一页停下来会调用此方法
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    
+    //手动去调用,手动拖拽停下来的方法,去更新字体
+    [self scrollViewDidEndDecelerating:scrollView];
+}
 
 
 
