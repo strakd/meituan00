@@ -14,14 +14,16 @@
 #import "ShopCommentController.h"
 #import "ShopinfoController.h"
 
-@interface KDShopController ()
+
+@interface KDShopController ()<UIScrollViewDelegate>
 //头部视图
 @property (nonatomic, weak) UIView *shopHeaderView;
 //导航栏右侧的添加
 @property (nonatomic, strong) UIBarButtonItem *rightBurronItem;
 //这个是
 @property (nonatomic, weak) UIView *shopTagView;
-
+//小黄条
+@property (nonatomic, weak) UIView *shopTagLineView;
 
 @end
 
@@ -159,6 +161,8 @@
         //小黄条添加约束的代码要写在按钮添加约束的后面
         make.centerX.equalTo(orderBtn).offset(0);
     }];
+    
+    _shopTagLineView = shopTagLineView;
 }
 
 #pragma mark -创建及添加标签栏中的按钮
@@ -221,6 +225,7 @@
     
     [scrollView.subviews mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.offset(0);
+#warning mark - scrollView中的子空间添加约束时不光要四边边距还要设置明确宽高用来计算conentSize
         make.width.height.equalTo(scrollView);
         
     }];
@@ -228,6 +233,8 @@
     //第一空:轴向水平 第二空:内部之间相隔0间距 第三空:距离父控件最左边0间距 第四空:距离父控件最右边0间距
     [scrollView.subviews mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:0 leadSpacing:0 tailSpacing:0];
     
+    //给scrollView设置代理
+    scrollView.delegate = self;
     
 }
 
@@ -296,6 +303,25 @@
     [pan setTranslation:CGPointZero inView:pan.view];
     
 }
+
+
+#pragma mark -监听scrollView
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    //取小数页
+    CGFloat page = scrollView.contentOffset.x / scrollView.bounds.size.width;
+    
+//    CGFloat transformOnceX = scrollView.bounds.size.width / scrollView.subviews.count;
+    
+    //计算小黄条一次走的距离
+    CGFloat transformOnceX = _shopTagView.bounds.size.width / (_shopTagView.subviews.count - 1);
+    
+    
+    //设置小黄条水平方向偏移
+    //控件加了约束后不要修改frame,但是不可以修改transform,因为不是同一套机制
+    _shopTagLineView.transform = CGAffineTransformMakeTranslation(transformOnceX * page ,0);
+    
+}
+
 
 
 
