@@ -14,6 +14,13 @@
 		5E4DAD1D1F31FF3A00AA4823 /* KDShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4DAD1A1F31FF3A00AA4823 /* KDShopController.m */; };
 		5E4DAD231F32001900AA4823 /* KDShopPOI_InfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4DAD221F32001900AA4823 /* KDShopPOI_InfoModel.m */; };
 		5E4DAD261F32069F00AA4823 /* KDShopHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4DAD251F32069F00AA4823 /* KDShopHeaderView.m */; };
+		5E4DAD291F32B8B600AA4823 /* UILabel+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4DAD281F32B8B600AA4823 /* UILabel+Addition.m */; };
+		5E4DAD2C1F32EEF000AA4823 /* UIImage+DashLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4DAD2B1F32EEF000AA4823 /* UIImage+DashLine.m */; };
+		5E4DAD341F32F1D900AA4823 /* HMInfoLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4DAD2F1F32F1D900AA4823 /* HMInfoLoopView.m */; };
+		5E4DAD351F32F1D900AA4823 /* HMInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4DAD311F32F1D900AA4823 /* HMInfoModel.m */; };
+		5E4DAD361F32F1D900AA4823 /* HMInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4DAD331F32F1D900AA4823 /* HMInfoView.m */; };
+		5E4DAD3A1F3338AA00AA4823 /* KDShopDetailControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4DAD391F3338AA00AA4823 /* KDShopDetailControllerViewController.m */; };
+		5E4DAD3D1F333AE900AA4823 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4DAD3C1F333AE900AA4823 /* UIView+Addition.m */; };
 		5E98DAEF1F30DA60006B26EC /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E98DAEE1F30DA60006B26EC /* UIColor+Addition.m */; };
 		5E98DAFB1F314CAC006B26EC /* ShopCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E98DAFA1F314CAC006B26EC /* ShopCommentController.m */; };
 		5E98DAFE1F314CC6006B26EC /* ShopinfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E98DAFD1F314CC6006B26EC /* ShopinfoController.m */; };
@@ -73,6 +80,20 @@
 		5E4DAD221F32001900AA4823 /* KDShopPOI_InfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDShopPOI_InfoModel.m; sourceTree = "<group>"; };
 		5E4DAD241F32069F00AA4823 /* KDShopHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDShopHeaderView.h; sourceTree = "<group>"; };
 		5E4DAD251F32069F00AA4823 /* KDShopHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDShopHeaderView.m; sourceTree = "<group>"; };
+		5E4DAD271F32B8B600AA4823 /* UILabel+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Addition.h"; sourceTree = "<group>"; };
+		5E4DAD281F32B8B600AA4823 /* UILabel+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Addition.m"; sourceTree = "<group>"; };
+		5E4DAD2A1F32EEF000AA4823 /* UIImage+DashLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DashLine.h"; sourceTree = "<group>"; };
+		5E4DAD2B1F32EEF000AA4823 /* UIImage+DashLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DashLine.m"; sourceTree = "<group>"; };
+		5E4DAD2E1F32F1D900AA4823 /* HMInfoLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMInfoLoopView.h; sourceTree = "<group>"; };
+		5E4DAD2F1F32F1D900AA4823 /* HMInfoLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMInfoLoopView.m; sourceTree = "<group>"; };
+		5E4DAD301F32F1D900AA4823 /* HMInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMInfoModel.h; sourceTree = "<group>"; };
+		5E4DAD311F32F1D900AA4823 /* HMInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMInfoModel.m; sourceTree = "<group>"; };
+		5E4DAD321F32F1D900AA4823 /* HMInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMInfoView.h; sourceTree = "<group>"; };
+		5E4DAD331F32F1D900AA4823 /* HMInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMInfoView.m; sourceTree = "<group>"; };
+		5E4DAD381F3338AA00AA4823 /* KDShopDetailControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDShopDetailControllerViewController.h; sourceTree = "<group>"; };
+		5E4DAD391F3338AA00AA4823 /* KDShopDetailControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDShopDetailControllerViewController.m; sourceTree = "<group>"; };
+		5E4DAD3B1F333AE900AA4823 /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		5E4DAD3C1F333AE900AA4823 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 		5E98DAED1F30DA60006B26EC /* UIColor+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Addition.h"; sourceTree = "<group>"; };
 		5E98DAEE1F30DA60006B26EC /* UIColor+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Addition.m"; sourceTree = "<group>"; };
 		5E98DAF21F30DBA9006B26EC /* Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Additions.h; sourceTree = "<group>"; };
@@ -251,6 +272,29 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5E4DAD2D1F32F1D900AA4823 /* LoopView */ = {
+			isa = PBXGroup;
+			children = (
+				5E4DAD2E1F32F1D900AA4823 /* HMInfoLoopView.h */,
+				5E4DAD2F1F32F1D900AA4823 /* HMInfoLoopView.m */,
+				5E4DAD301F32F1D900AA4823 /* HMInfoModel.h */,
+				5E4DAD311F32F1D900AA4823 /* HMInfoModel.m */,
+				5E4DAD321F32F1D900AA4823 /* HMInfoView.h */,
+				5E4DAD331F32F1D900AA4823 /* HMInfoView.m */,
+			);
+			path = LoopView;
+			sourceTree = "<group>";
+		};
+		5E4DAD371F33386F00AA4823 /* ShopDetailController(商家详情) */ = {
+			isa = PBXGroup;
+			children = (
+				5E4DAD381F3338AA00AA4823 /* KDShopDetailControllerViewController.h */,
+				5E4DAD391F3338AA00AA4823 /* KDShopDetailControllerViewController.m */,
+			);
+			name = "ShopDetailController(商家详情)";
+			path = ShopDetailController;
+			sourceTree = "<group>";
+		};
 		5E98DAF31F30E002006B26EC /* ShopComment(评价) */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +332,7 @@
 				5E98DAF31F30E002006B26EC /* ShopComment(评价) */,
 				5E98DAF41F30E002006B26EC /* Shopinfo(商家) */,
 				5EEFEE141F2DFA3F00BFB34A /* Main(主要的) */,
+				5E4DAD371F33386F00AA4823 /* ShopDetailController(商家详情) */,
 				5EEFEE151F2DFA3F00BFB34A /* Shop(点餐) */,
 				5EEFEE131F2DFA3F00BFB34A /* FoodDeatil(实物详情) */,
 			);
@@ -332,6 +377,7 @@
 		5EEFEE161F2DFAB500BFB34A /* Lib(第三方框架) */ = {
 			isa = PBXGroup;
 			children = (
+				5E4DAD2D1F32F1D900AA4823 /* LoopView */,
 				5EEFEE171F2DFAD700BFB34A /* AFNetworking */,
 				5EEFEE251F2DFAD700BFB34A /* Masonry */,
 				5EEFEE3F1F2DFAD700BFB34A /* SDWebImage */,
@@ -443,6 +489,12 @@
 			children = (
 				5E98DAED1F30DA60006B26EC /* UIColor+Addition.h */,
 				5E98DAEE1F30DA60006B26EC /* UIColor+Addition.m */,
+				5E4DAD271F32B8B600AA4823 /* UILabel+Addition.h */,
+				5E4DAD281F32B8B600AA4823 /* UILabel+Addition.m */,
+				5E4DAD2A1F32EEF000AA4823 /* UIImage+DashLine.h */,
+				5E4DAD2B1F32EEF000AA4823 /* UIImage+DashLine.m */,
+				5E4DAD3B1F333AE900AA4823 /* UIView+Addition.h */,
+				5E4DAD3C1F333AE900AA4823 /* UIView+Addition.m */,
 				5E98DAF21F30DBA9006B26EC /* Additions.h */,
 			);
 			name = "Common(分类)";
@@ -539,11 +591,14 @@
 				5E9B64D61F2E0B1B000336F4 /* KDNavigationController.m in Sources */,
 				5EEFEE6C1F2DFAD700BFB34A /* AFURLSessionManager.m in Sources */,
 				5E98DAFE1F314CC6006B26EC /* ShopinfoController.m in Sources */,
+				5E4DAD351F32F1D900AA4823 /* HMInfoModel.m in Sources */,
+				5E4DAD3D1F333AE900AA4823 /* UIView+Addition.m in Sources */,
 				5EEFEE731F2DFAD700BFB34A /* NSArray+MASAdditions.m in Sources */,
 				5E9B64D31F2E04E6000336F4 /* KDFoodDetailController.m in Sources */,
 				5E98DB011F314D3E006B26EC /* ShopOrderController.m in Sources */,
 				5E98DAEF1F30DA60006B26EC /* UIColor+Addition.m in Sources */,
 				5EEFEE691F2DFAD700BFB34A /* AFSecurityPolicy.m in Sources */,
+				5E4DAD3A1F3338AA00AA4823 /* KDShopDetailControllerViewController.m in Sources */,
 				5EEFEE821F2DFAD700BFB34A /* UIButton+WebCache.m in Sources */,
 				5EEFEE751F2DFAD700BFB34A /* View+MASAdditions.m in Sources */,
 				5EEFEE851F2DFAD700BFB34A /* UIImage+WebP.m in Sources */,
@@ -554,12 +609,14 @@
 				5EEFEE831F2DFAD700BFB34A /* UIImage+GIF.m in Sources */,
 				5E98DAFB1F314CAC006B26EC /* ShopCommentController.m in Sources */,
 				5E4DAD1D1F31FF3A00AA4823 /* KDShopController.m in Sources */,
+				5E4DAD341F32F1D900AA4823 /* HMInfoLoopView.m in Sources */,
 				5EEFEE791F2DFAD700BFB34A /* NSImage+WebCache.m in Sources */,
 				5E4DAD231F32001900AA4823 /* KDShopPOI_InfoModel.m in Sources */,
 				5EEFEE741F2DFAD700BFB34A /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				5EEFEE841F2DFAD700BFB34A /* UIImage+MultiFormat.m in Sources */,
 				5EEFEE7D1F2DFAD700BFB34A /* SDWebImageDecoder.m in Sources */,
 				5EEFEE6D1F2DFAD700BFB34A /* MASCompositeConstraint.m in Sources */,
+				5E4DAD361F32F1D900AA4823 /* HMInfoView.m in Sources */,
 				5EEFEE781F2DFAD700BFB34A /* NSData+ImageContentType.m in Sources */,
 				5EFACECB1F2E4A4A00E8F42B /* KDNavigationBar.m in Sources */,
 				5EEFEE7F1F2DFAD700BFB34A /* SDWebImageDownloaderOperation.m in Sources */,
@@ -567,10 +624,12 @@
 				5EEFEE7B1F2DFAD700BFB34A /* SDImageCacheConfig.m in Sources */,
 				5EEFEE681F2DFAD700BFB34A /* AFNetworkReachabilityManager.m in Sources */,
 				5EEFEE6B1F2DFAD700BFB34A /* AFURLResponseSerialization.m in Sources */,
+				5E4DAD291F32B8B600AA4823 /* UILabel+Addition.m in Sources */,
 				5EEFEE6F1F2DFAD700BFB34A /* MASConstraintMaker.m in Sources */,
 				5EEFEE7E1F2DFAD700BFB34A /* SDWebImageDownloader.m in Sources */,
 				5EEFEE761F2DFAD700BFB34A /* ViewController+MASAdditions.m in Sources */,
 				5EEFEE771F2DFAD700BFB34A /* MKAnnotationView+WebCache.m in Sources */,
+				5E4DAD2C1F32EEF000AA4823 /* UIImage+DashLine.m in Sources */,
 				5E4DAD261F32069F00AA4823 /* KDShopHeaderView.m in Sources */,
 				5EEFEE721F2DFAD700BFB34A /* MASViewConstraint.m in Sources */,
 				5EEFEE871F2DFAD700BFB34A /* UIImageView+WebCache.m in Sources */,

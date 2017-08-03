@@ -10,6 +10,8 @@
 #define Additions_h
 
 #import "UIColor+Addition.h"
-
+#import "UILabel+Addition.h"
+#import "UIImage+DashLine.h"
+#import "UIView+Addition.h"
 
 #endif /* Additions_h */
