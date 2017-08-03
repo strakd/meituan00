@@ -167,6 +167,8 @@
 
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
+        
+        
         //一启动让它模态出商家详情控制器
                 [self loopViewClick];
     });
